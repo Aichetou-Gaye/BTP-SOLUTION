@@ -45,7 +45,7 @@ header img {
     width: 90px;
     height: 90px;
 }
-header nav .nav {
+header .nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -69,6 +69,7 @@ header nav .nav {
     height: 3px;
     background-color: var(--white);
     justify-content: end;
+    cursor: pointer;
 }
 .toggle-menu::after,
 .toggle-menu::before{
@@ -77,6 +78,7 @@ header nav .nav {
     width: 30px;
     height: 3px;
     background-color: var(--white);
+    cursor: pointer;
 }
 .toggle-menu::after {
     top: 10px;
@@ -187,7 +189,7 @@ h2 span {
     flex-direction: column;
     box-shadow: 3px 4px 16px 5px var(--asparagus);
     width: 20em;
-    padding: 60px 30px;
+    padding: 30px;
     gap: 40PX;
 }
 .serv img {
@@ -219,7 +221,7 @@ h2 span {
 }
 .about img {
     position: absolute;
-    width: 700px;
+    width: 50%;
     height: 100vh;
     right: 0;
 
@@ -261,17 +263,19 @@ h2 span {
     padding: 60px;
     height: auto;
     position: relative;
-    gap: 5EM;
+    gap: 50PX;
 }
 .clients .title-cli {
     display: flex;
     flex-direction: column;
+    width: 38%;
 }
 .title-cli h2 {
     width: 15ch;
     margin-top: 60px;
 }
 .title-cli img {
+    display: flex;
     height: 230px;
     position: absolute;
     top: 17em;
@@ -289,9 +293,8 @@ h2 span {
     position: relative;
     box-shadow: 0px 4px 4px 5px var(--asparagus);
     border-radius: 5px;
-    width: 650px;
-    gap: 40PX;
-    padding: 15px 40px;
+    gap: 30PX;
+    padding: 15px 30px;
 }
 .client img {
     width: 140px;
@@ -316,6 +319,8 @@ h2 span {
 .client div p {
     color: var(--dark);
     text-align: justify;
+    width: 50ch;
+    font-size: 13px;
 }
 /*temoignages*/
 .contact {
@@ -410,10 +415,10 @@ h2 span {
     width: 50%;
 }
 .top div input {
+    padding: 12px;
     font-family: Montserrat;
-    border-radius: 5px;
-    padding: 8px;
     font-size: 11px;
+    border-radius: 5px;
     border: none;
     box-shadow: 0px 2px 1px 0px var(--zodiac);
 }
@@ -424,13 +429,13 @@ footer {
     display: flex;
     flex-direction: column;
     color: var(--white);
-    padding: 40px 60px;
+    padding: 30px 60px;
 }
 footer .foot-top {
     display: flex;
     flex-direction: row;
     height: 45vh;
-    margin-bottom: 10vh;
+    margin-bottom: 3vh;
     justify-content: center;
     align-items: center;
 }
@@ -438,7 +443,7 @@ footer .foot-top {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 5em 40PX 0px;
+    padding-right: 60px;
     border-right: 2px solid var(--asparagus);
     gap: 20PX;
 }
@@ -455,7 +460,7 @@ footer .foot-top {
     flex-direction: column;
     font-size: 20px;
     align-items: center;
-    padding: 30px 90px 40PX 90px;
+    padding: 0px 70px;
     border-right: 2px solid var(--asparagus);
     row-gap: 30PX;
 }
@@ -474,7 +479,7 @@ footer .foot-top {
 .foot2 .social {
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 60%;
 }
 .social a img {
     width: 30px;
@@ -485,36 +490,37 @@ footer .foot-top {
     flex-direction: column;
     font-size: 20px;
     width: 30%;
-    padding: 30px 0px 40PX 60px;
+    padding: 30px 0px 0px 60px;
     justify-content: center;
     gap: 30PX;
-    position: relative;
 }
 .foot3 h3 {
     font-size: 20px;
     font-weight: normal;
 }
-.foot3 input {
-    padding: 12px;
-    font-size: 13px;
-    border-radius: 10px;
-    border: none;
-    font-family: Montserrat;
-    width: 80%;
+.foot3 div{
+    display: flex;
 }
-.foot3 button {
+.foot3 div input {
+    padding: 12px;
+    font-family: Montserrat;
+    font-size: 11px;
+    border: none;
+    width: 80%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.foot3 div button {
     padding: 12px;
     width: 120px;
     font-size: 13px;
     font-weight: 800;
-    border-radius: 10px;
     border: none;
     color: var(--white);
     background-color: var(--zodiac);
     font-family: Montserrat;
-    position: absolute;
-    top: 9.5Em;
-    left: 19Em;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     cursor: pointer;
 } 
 footer .foot-bottom {
@@ -554,7 +560,7 @@ footer .foot-bottom {
     padding: 0px 90px;
 }
 /*RESPONSIVITE*/
-@media (max-width:480px) {
+@media (max-width:500px) {
     .container {
         z-index: 5;
         margin: 0;
@@ -566,13 +572,12 @@ footer .foot-bottom {
         top: 0;
         left: 0;
         right: 0;
-        /* width: 100%; */
     }
     header img {
         width: 60px;
         height: 60px;
     }
-    header nav .nav {
+    header .nav {
         display: none;
     }
     .toggle-menu {
@@ -586,9 +591,30 @@ footer .foot-bottom {
         transform: translateY(0) rotate(-135deg);
         box-shadow: 0 0 0 var(--asparagus);
     }
+    header .nav.responsive {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--zodiac);
+        height: 60vh;
+        right: 0;
+        width: 40%;
+        padding: 0 20px;
+        margin: 30px 0;
+    }
+    header .nav.responsive li a {
+        border-top: 1px solid var(--asparagus);
+        padding: 40px 0;
+        font-size: 15px;
+    }
+    header .nav.responsive li a:hover {
+        padding-left: 40px;
+    }
     .heros {
         height: 80vh;
-        padding: 5em 20px;
+        padding: 2em 20px;
         justify-content: center;
         align-items: center;
     }
@@ -638,12 +664,16 @@ footer .foot-bottom {
     }
     .services .service {
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
         gap: 45PX;
-        margin-top: 30px;
+        margin: 30px 0;
     }
     .service .serv {
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
         padding: 10px;
         box-shadow: 2px 2px 6px 1px var(--asparagus);
         width: auto;
@@ -667,12 +697,12 @@ footer .foot-bottom {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 40px 0;
+        padding: 50px 0;
     }
     .about img {
         position: static;
         width: 20em;
-        height: 40vh;
+        height: 35vh;
         padding-top: 40px;
     }
     .about .about-contain {
@@ -697,30 +727,30 @@ footer .foot-bottom {
         font-size: 23px;
     }
     .about-contain p{
-        font-size: 16px;
+        font-size: 14px;
         text-align: justify;
         margin-left: 10PX;
     }
+    /*TEMOIGNAGES*/
     .clients{
         flex-direction: column;
-        padding: 40px 20px;
+        padding:20px;
         height: auto;
         gap: 20PX;
     }
     .title-cli h2 {
         font-size: 25px;
-        width: auto;
+        width: max-content;
         margin: 0 0 10PX 0;
-        text-align: center;
+        
     }
     .title-cli img {
         height: 100px;
         position: static;
-        top: 17em;
-        left: 10em;
     }
     .clients .said {
         align-items: center;
+        margin-bottom: 30px;
     }
     .said .client {
         flex-direction: column;
@@ -745,7 +775,9 @@ footer .foot-bottom {
     }
     .client div p {
         font-size: 14px;
+        width: 25ch;
     }
+     /*CONTACT*/
     .contact {
         padding: 20px;
         align-items: center;
@@ -824,7 +856,7 @@ footer .foot-bottom {
         row-gap: 20PX;
     }
     .foot2 .links {
-        width: 80%;
+        width: 100%;
     }
     .foot-top .foot3 {
         width: 100%;
@@ -837,8 +869,6 @@ footer .foot-bottom {
         text-align: center;
     }
     .foot3 button {
-        top: 6.7Em;
-        left: 16.1Em;
         width: 100px;
     }
     footer .foot-bottom {
@@ -872,4 +902,642 @@ footer .foot-bottom {
         padding-left: 20px;
     }
 }
-
+@media (500px < width <= 900px) {
+    .container {
+        z-index: 5;
+        margin: 0;
+    }
+    header {
+        padding: 0 50px;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+    header .nav {
+        display: none;
+    }
+    .toggle-menu {
+        display: flex;
+    }
+    .toggle-menu.active::before{
+        transform: translateY(0) rotate(135deg);
+        box-shadow: 0 0 0 var(--asparagus);
+    }
+    .toggle-menu.active::after {
+        transform: translateY(0) rotate(-135deg);
+        box-shadow: 0 0 0 var(--asparagus);
+    }
+    header .nav.responsive {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--zodiac);
+        height: 60vh;
+        right: 0;
+        width: 40%;
+        padding: 0 20px;
+        margin: 30px 0;
+    }
+    header .nav.responsive li a {
+        border-top: 1px solid var(--asparagus);
+        padding: 40px 0;
+        font-size: 15px;
+    }
+    header .nav.responsive li a:hover {
+        padding-left: 40px;
+    }
+    .heros {
+        height: 80vh;
+        padding: 2em 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    .heros .hero {
+        row-gap: 25PX;
+    }
+    .hero h1 {
+        font-size: 28px;
+        text-align: center;
+        width: fit-content;
+    }
+    .hero h1 span{
+        font-size: 33px;
+    }
+    .hero #slog div {
+        font-size: 1.2em;
+        display: flex;
+        font-weight: 700;
+        gap: 10PX;
+        margin-bottom: 15px;
+    }
+    .hero #slog div img {
+        width: 20px;
+    }
+    .hero button{
+        font-size: 1.2em;
+        font-family: Montserrat;
+        align-self: center;
+        width: 200px;
+        height: 45px;
+        border-radius: 10px;
+    }
+    /*SERVICES*/
+    .services {
+        padding: 20px 50px;
+        height: auto;
+    }
+    .title-serv img {
+        width: 50px;
+    }
+    h2 {
+        font-size: 27px;
+    }
+    .services h2::after {
+        width: 60px;
+    }
+    .services .service {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 45PX;
+        margin: 30px 0;
+    }
+    .service .serv {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-shadow: 2px 2px 6px 1px var(--asparagus);
+        width: auto;
+        gap: 15px;
+    }
+    .serv img {
+        width: 120px;
+        border-radius: 50%;
+        place-self: start;
+    }
+    .serv div h3 {
+        font-size: 16px;
+        text-align: start;
+    }
+    .serv div p {
+        font-size: 12px;
+    }
+    /*a propos de btp*/
+    .about {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+    }
+    .about img {
+        position: static;
+        width: 100%;
+        height: 55vh;
+        padding-top: 40px;
+    }
+    .about .about-contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--white);
+        width: auto;
+        padding: 10px 50px;
+    }
+    .about-contain .title-abt {
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+    }
+    .title-abt img {
+        height: 40px;
+        width: 50px;
+        padding: 0;
+    }
+    .title-abt h2 {
+        font-size: 23px;
+        text-align: center;
+    }
+    .about-contain p{
+        font-size: 14px;
+        text-align: justify;
+        margin-left: 10PX;
+    }
+    /*TEMOIGNAGES*/
+    .clients{
+        flex-direction: column;
+        padding:20px 50px;
+        height: auto;
+        gap: 20PX;
+    }
+    .clients .title-cli {
+        width: 100%;
+        align-items: center;
+    }
+    .title-cli h2 {
+        font-size: 25px;
+        width: max-content;
+        margin: 0 0 10PX 0;
+        text-align: center;
+    }
+    .title-cli img {
+        height: 100px;
+        position: static;
+    }
+    .clients .said {
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .said .client {
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 90%;
+        height: auto;
+        box-shadow: 0px 2px 4px 3px var(--asparagus);
+        padding:10px 20px;
+        gap: 13PX;
+    }
+    .client img {
+        max-width: 30%;
+        width: 100px;
+        height: 100px;
+    }
+    .client div img {
+        height: 45px;
+        bottom: -1.4em;
+        right: -3.1em;
+    }
+    .client div h3 {
+        font-size: 17px;
+    }
+    .client div p {
+        font-size: 14px;
+        width: fit-content;
+    }
+     /*CONTACT*/
+    .contact {
+        padding: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 20PX;
+    }
+    .contact h2 {
+        font-size: 25px;
+        margin: 0;
+    }
+    .contact > p {
+        font-size: 14px;
+        padding: 0;
+        text-align: start;
+    }
+    .contact iframe {
+        height: 40vh;
+        width: 100%;
+    }
+    .contact .contact-direct {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 3EM;
+        width: 100%;
+    }
+    .contact-direct .ct-left{
+        width:75%;
+        font-size: 14px;
+        padding: 20px;
+    }
+    .contact-direct #formul{
+        width: 80%;
+    }
+    #formul .top {
+        flex-direction: column;
+    }
+    #formul button {
+        font-size: 15px;
+        height: 4vh;
+    }
+    .top  div {
+        width: 100%;
+    }
+    /*FOOTER*/
+    footer {
+        padding: 60px;
+    }
+    footer .foot-top {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 5vh;
+        align-items: center;
+        justify-content: center;
+        padding: 0 50px;
+    }
+    .foot-top .foot1 {
+        padding: 0 0 20px 0;
+        border: 0;
+        width: 100%;
+        border-bottom: 1px solid var(--asparagus);
+        gap: 10PX;
+    }
+    .foot1 p{
+        width: 45ch;
+    }    
+    .foot1 img {
+        width: 75px;
+    }
+    .foot-top .foot2 {
+        width: 100%;
+        font-size: 18px;
+        padding: 20PX 0;
+        border: 0;
+        border-bottom: 1px solid var(--asparagus);
+        row-gap: 20PX;
+    }
+    .foot2 .links {
+        width: 80%;
+    }
+    .links a:nth-child(even) {
+      text-align: right;
+    }
+    .foot2 .social {
+        justify-content: space-around;
+        width: 60%;
+    }
+    .foot-top .foot3 {
+        width: 100%;
+        padding: 20px 0;
+        gap: 10PX;
+        align-items: center;
+    }
+    .foot3 h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .foot3 button {
+        width: 120px;
+    }
+    footer .foot-bottom {
+        padding: 20px;
+    }
+    .foot-bottom p::after {
+        display: none;
+    }
+    .foot-bottom .last {
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .last a {
+        margin-bottom: 20px;
+        height: 13px ;
+    }
+    .last a:not(:last-of-type) {
+        border: 0;
+    }
+    .last a:last-of-type {
+        text-align: start;
+    }
+    .last a:nth-child(2),.last a:nth-child(3)  {
+        text-align: start;
+        padding: 0;
+    }
+    .last a:nth-child(odd){
+        border-right: 2px solid var(--white);
+    }
+    .last a:nth-child(even){
+        padding-left: 20px;
+    }
+}
+@media (900px < width <= 1200px) {
+    .container {
+        z-index: 5;
+        margin: 0;
+    }
+    header {
+        padding: 0 70px;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+    header .nav {
+        display: flex;
+    }
+    .nav li a {
+        font-size: 16px;
+    }
+    .heros {
+        height: 80vh;
+        padding: 3em 70px;
+        justify-content: center;
+        align-items: center;
+    }
+    .heros .hero {
+        row-gap: 25PX;
+    }
+    .hero h1 {
+        font-size: 30px;
+        width: 35ch;
+    }
+    .hero h1 span{
+        font-size: 35px;
+    }
+    .hero #slog div {
+        font-size: 1.2em;
+        display: flex;
+        font-weight: 700;
+        gap: 10PX;
+        margin-bottom: 15px;
+    }
+    .hero #slog div img {
+        width: 20px;
+    }
+    .hero button{
+        font-size: 1.2em;
+        font-family: Montserrat;
+        align-self: center;
+        width: 230px;
+        height: 50px;
+        border-radius: 10px;
+    }
+    /*SERVICES*/
+    .services {
+        padding: 20px 70px;
+        height: auto;
+    }
+    .title-serv img {
+        width: 65px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    .services h2::after {
+        width: 50px;
+    }
+    .services .service {
+        gap: 45PX;
+        margin: 30px 0;
+    }
+    .service .serv{
+        padding: 30px;
+    }
+    .serv div h3 {
+        font-size: 16px;
+    }
+    .serv div p {
+        font-size: 14px;
+    }
+    /*a propos de btp*/
+    .about {
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+    .about img {
+        position: static;
+        width: 50%;
+        height: 65vh;
+        padding-top: 40px;
+    }
+    .about .about-contain {
+        width: 40%;
+        padding: 10px 20px;
+    }
+    .about-contain .title-abt {
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .title-abt img {
+        height: 40px;
+        width: 50px;
+        padding: 0;
+    }
+    .title-abt h2 {
+        font-size: 23px;
+    }
+    .about-contain p{
+        font-size: 14px;
+        text-align: justify;
+        margin-left: 10PX;
+    }
+    /*TEMOIGNAGES*/
+    .clients{
+        flex-direction: column;
+        padding:0 70px;
+        height: auto;
+        gap: 20PX;
+    }
+    .clients .title-cli {
+        width: 100%;
+    }
+    .title-cli h2 {
+        font-size: 35px;
+        width: auto;
+        text-align: center;
+    }
+    .title-cli img {
+        height: 100px;
+        position: static;
+    }
+    .clients .said {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .said .client {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 30%;
+        height: 50vh;
+        box-shadow: 0px 2px 4px 3px var(--asparagus);
+        padding:20px;
+        gap: 15PX;
+    }
+    .client img {
+        width: 100px;
+        height: 100px;
+    }
+    .client div img {
+        height: 45px;
+        bottom: -1.5em;
+        right: -3.2em;
+    }
+    .client div h3 {
+        font-size: 17px;
+    }
+    .client div p {
+        font-size: 14px;
+        width: fit-content;
+    }
+     /*CONTACT*/
+    .contact {
+        padding: 70px;
+        align-items: center;
+        justify-content: center;
+        gap: 20PX;
+    }
+    .contact h2 {
+        font-size: 35px;
+        margin: 0;
+    }
+    .contact > p {
+        font-size: 17px;
+        padding: 0;
+        text-align: start;
+    }
+    .contact iframe {
+        height: 40vh;
+        width: 100%;
+    }
+    .contact .contact-direct {
+        padding: 20px;
+        flex-direction: row;
+        align-items: center;
+        gap: 3EM;
+        width: 100%;
+    }
+    .contact-direct .ct-left{
+        font-size: 14px;
+        padding: 20px;
+    }
+    .contact-direct #formul{
+    }
+    #formul .top {
+        flex-direction: column;
+    }
+    #formul button {
+        font-size: 15px;
+        height: 4vh;
+    }
+    .top  div {
+        width: 100%;
+    }
+    /*FOOTER*/
+    footer {
+        padding:10px 70px;
+    }
+    footer .foot-top {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .foot-top .foot1 {
+        padding: 0 20px 0 0;
+        gap: 10PX;
+    }
+    .foot1 p{
+        width: 25ch;
+        font-size: 13px;
+    }    
+    .foot1 img {
+        width: 80px;
+    }
+    .foot-top .foot2 {
+        font-size: 15px;
+        padding: 0 20PX;
+        row-gap: 20PX;
+        width: max-content;
+    }
+    .foot2 .links {
+        width: 100%;
+    }
+    .links a {
+        font-size: 13px;
+    }
+    .foot-top .foot3 {
+        padding: 20px;
+        padding-right: 0;
+        gap: 10PX;
+        align-items: center;
+    }
+    .foot3 h3 {
+        font-size: 16px;
+        text-align: start;
+    }
+    .foot3 button {
+        width: 50px;
+    }
+    footer .foot-bottom {
+        padding: 0;
+    }
+    .foot-bottom p::after {
+        display: none;
+    }
+    .foot-bottom .last {
+        padding: 0;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .last a {
+        height: 13px ;
+    }
+    .last a:not(:last-of-type) {
+        border-right: 2px solid var(--white);
+    }
+    .last a:last-of-type {
+        text-align: end;
+    }
+    .last a:nth-child(2),.last a:nth-child(3)  {
+        text-align: center;
+        padding: 0;
+    }
+}
