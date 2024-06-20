@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
     --zodiac: #0c2c43;
     --green: #d9e5c4;
@@ -46,16 +45,16 @@ header img {
     width: 90px;
     height: 90px;
 }
-header nav ul {
+header nav .nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-ul li {
+.nav li {
     list-style: none;
 }
-ul li a {
+.nav li a {
     color: var(--white);
     text-decoration: none;
     font-size: 20px;
@@ -115,6 +114,7 @@ ul li a {
     display: flex;
     flex-direction: column;
     color: var(--white);
+
 }
 .hero h1 {
     font-size: 45px;
@@ -154,6 +154,7 @@ ul li a {
 .services .title-serv {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .title-serv img {
     width: 70px;
@@ -205,7 +206,6 @@ h2 span {
     margin: 0;
     font-weight: 700;
 }
-
 .serv div p {
     font-size: 1.2em;
 }
@@ -239,10 +239,11 @@ h2 span {
     width: 100%;
 }
 .title-abt img {
+    position: absolute;
     transform: rotate(-90deg);
     height: 40px;
     width: 100px;
-    left: -1em;
+    left: -2em;
     top: 1.3em;
 }
 .title-abt h2 {
@@ -318,6 +319,8 @@ h2 span {
 }
 /*temoignages*/
 .contact {
+    display: flex;
+    flex-direction: column;
     background-color: var(--green);
     padding: 60px ;
     padding-bottom: 0;
@@ -327,7 +330,7 @@ h2 span {
     text-align: center;
 }
 .contact > p {
-    color: var(--zodiac);
+    color: var(--dark);
     text-align: center;
     padding-bottom: 20px;
     font-weight: 500;
@@ -428,6 +431,8 @@ footer .foot-top {
     flex-direction: row;
     height: 45vh;
     margin-bottom: 10vh;
+    justify-content: center;
+    align-items: center;
 }
 .foot-top .foot1 {
     display: flex;
@@ -450,7 +455,7 @@ footer .foot-top {
     flex-direction: column;
     font-size: 20px;
     align-items: center;
-    padding: 30px 60px 40PX 60px;
+    padding: 30px 90px 40PX 90px;
     border-right: 2px solid var(--asparagus);
     row-gap: 30PX;
 }
@@ -495,10 +500,11 @@ footer .foot-top {
     border-radius: 10px;
     border: none;
     font-family: Montserrat;
+    width: 80%;
 }
 .foot3 button {
     padding: 12px;
-    width: 150px;
+    width: 120px;
     font-size: 13px;
     font-weight: 800;
     border-radius: 10px;
@@ -507,8 +513,8 @@ footer .foot-top {
     background-color: var(--zodiac);
     font-family: Montserrat;
     position: absolute;
-    top: 12.7Em;
-    left: 22Em;
+    top: 9.5Em;
+    left: 19Em;
     cursor: pointer;
 } 
 footer .foot-bottom {
@@ -546,5 +552,324 @@ footer .foot-bottom {
 .last a:nth-child(2),.last a:nth-child(3)  {
     text-align: center;
     padding: 0px 90px;
+}
+/*RESPONSIVITE*/
+@media (max-width:480px) {
+    .container {
+        z-index: 5;
+        margin: 0;
+    }
+    header {
+        padding: 0 20px;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        /* width: 100%; */
+    }
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+    header nav .nav {
+        display: none;
+    }
+    .toggle-menu {
+        display: flex;
+    }
+    .toggle-menu.active::before{
+        transform: translateY(0) rotate(135deg);
+        box-shadow: 0 0 0 var(--asparagus);
+    }
+    .toggle-menu.active::after {
+        transform: translateY(0) rotate(-135deg);
+        box-shadow: 0 0 0 var(--asparagus);
+    }
+    .heros {
+        height: 80vh;
+        padding: 5em 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .heros .hero {
+        row-gap: 25PX;
+    }
+    .hero h1 {
+        font-size: 26px;
+        text-align: center;
+        width: fit-content;
+    }
+    .hero h1 span{
+        display: block;
+        font-size: 32px;
+    }
+    .hero #slog div {
+        font-size: 1.2em;
+        display: flex;
+        font-weight: 700;
+        gap: 10PX;
+        margin-bottom: 15px;
+    }
+    .hero #slog div img {
+        width: 20px;
+    }
+    .hero button{
+        font-size: 1.2em;
+        font-family: Montserrat;
+        align-self: center;
+        width: 200px;
+        height: 45px;
+        border-radius: 10px;
+    }
+    /*SERVICES*/
+    .services {
+        padding: 20px;
+        height: auto;
+    }
+    .title-serv img {
+        width: 30px;
+    }
+    h2 {
+        font-size: 23px;
+    }
+    .services h2::after {
+        width: 50px;
+    }
+    .services .service {
+        display: flex;
+        flex-direction: column;
+        gap: 45PX;
+        margin-top: 30px;
+    }
+    .service .serv {
+        flex-direction: row;
+        padding: 10px;
+        box-shadow: 2px 2px 6px 1px var(--asparagus);
+        width: auto;
+        gap: 15px;
+    }
+    .serv img {
+        width: 100px;
+        border-radius: 50%;
+        place-self: start;
+    }
+    .serv div h3 {
+        font-size: 16px;
+        text-align: start;
+    }
+    .serv div p {
+        font-size: 12px;
+    }
+    /*a propos de btp*/
+    .about {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+    }
+    .about img {
+        position: static;
+        width: 20em;
+        height: 40vh;
+        padding-top: 40px;
+    }
+    .about .about-contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--white);
+        width: fit-content;
+        padding: 10px 50px;
+    }
+    .about-contain .title-abt {
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .title-abt img {
+        height: 40px;
+        width: 50px;
+        padding: 0;
+    }
+    .title-abt h2 {
+        font-size: 23px;
+    }
+    .about-contain p{
+        font-size: 16px;
+        text-align: justify;
+        margin-left: 10PX;
+    }
+    .clients{
+        flex-direction: column;
+        padding: 40px 20px;
+        height: auto;
+        gap: 20PX;
+    }
+    .title-cli h2 {
+        font-size: 25px;
+        width: auto;
+        margin: 0 0 10PX 0;
+        text-align: center;
+    }
+    .title-cli img {
+        height: 100px;
+        position: static;
+        top: 17em;
+        left: 10em;
+    }
+    .clients .said {
+        align-items: center;
+    }
+    .said .client {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 15em;
+        box-shadow: 0px 2px 4px 3px var(--asparagus);
+        padding:10px 20px;
+        gap: 13PX;
+    }
+    .client img {
+        width: 100px;
+        height: 100px;
+    }
+    .client div img {
+        height: 45px;
+        bottom: -1.5em;
+        right: -3.2em;
+    }
+    .client div h3 {
+        font-size: 17px;
+    }
+    .client div p {
+        font-size: 14px;
+    }
+    .contact {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 20PX;
+    }
+    .contact h2 {
+        font-size: 25px;
+        margin: 0;
+    }
+    .contact > p {
+        font-size: 14px;
+        padding: 0;
+        text-align: start;
+    }
+    .contact iframe {
+        height: 40vh;
+        width: 83%;
+    }
+    .contact .contact-direct {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 3EM;
+        width: 100%;
+    }
+    .contact-direct .ct-left{
+        width: 73%;
+        font-size: 14px;
+        padding: 20px;
+    }
+    .contact-direct #formul{
+        width: 83%;
+    }
+    #formul .top {
+        flex-direction: column;
+    }
+    #formul button {
+        font-size: 15px;
+        height: 4vh;
+    }
+    .top  div {
+        width: 100%;
+    }
+    /*FOOTER*/
+    footer {
+        padding: 20px;
+    }
+    footer .foot-top {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 5vh;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 40px;
+    }
+    .foot-top .foot1 {
+        padding: 0 0 20px 0;
+        border: 0;
+        width: 100%;
+        border-bottom: 1px solid var(--asparagus);
+        gap: 10PX;
+    }
+    .foot1 p{
+        width: 35ch;
+    }    
+    .foot1 img {
+        width: 65px;
+    }
+    .foot-top .foot2 {
+        width: 100%;
+        font-size: 18px;
+        padding: 20PX 0;
+        border: 0;
+        border-bottom: 1px solid var(--asparagus);
+        row-gap: 20PX;
+    }
+    .foot2 .links {
+        width: 80%;
+    }
+    .foot-top .foot3 {
+        width: 100%;
+        padding: 20px 0;
+        gap: 10PX;
+        align-items: center;
+    }
+    .foot3 h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .foot3 button {
+        top: 6.7Em;
+        left: 16.1Em;
+        width: 100px;
+    }
+    footer .foot-bottom {
+        padding: 20px;
+    }
+    .foot-bottom p::after {
+        display: none;
+    }
+    .foot-bottom .last {
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .last a {
+        margin-bottom: 20px;
+        height: 13px ;
+    }
+    .last a:not(:last-of-type) {
+        border: 0;
+    }
+    .last a:last-of-type {
+        text-align: start;
+    }
+    .last a:nth-child(2),.last a:nth-child(3)  {
+        text-align: start;
+        padding: 0;
+    }
+    .last a:nth-child(odd){
+        border-right: 2px solid var(--white);
+    }
+    .last a:nth-child(even){
+        padding-left: 20px;
+    }
 }
 
