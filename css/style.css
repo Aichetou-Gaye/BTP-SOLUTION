@@ -647,6 +647,7 @@ footer .foot-bottom {
         width: 200px;
         height: 45px;
         border-radius: 10px;
+        cursor: pointer;
     }
     /*SERVICES*/
     .services {
@@ -818,6 +819,7 @@ footer .foot-bottom {
     #formul button {
         font-size: 15px;
         height: 4vh;
+        cursor: pointer;
     }
     .top  div {
         width: 100%;
@@ -870,6 +872,7 @@ footer .foot-bottom {
     }
     .foot3 button {
         width: 100px;
+        cursor: pointer;
     }
     footer .foot-bottom {
         padding: 20px;
