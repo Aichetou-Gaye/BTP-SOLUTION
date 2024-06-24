@@ -63,6 +63,7 @@ header .nav {
     font-weight: 500;
     display: block;
     padding: 30px;
+    cursor: pointer;
 }
 .toggle-menu {
     display: flex;
@@ -72,6 +73,8 @@ header .nav {
     background-color: var(--white);
     justify-content: end;
     cursor: pointer;
+    max-width: 100PX;
+    max-height: 60px;
 }
 .toggle-menu::after,
 .toggle-menu::before{
