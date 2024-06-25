@@ -31,7 +31,7 @@ body {
     width: 100%;
     position: relative;
     font-family: Montserrat;
-    z-index: -1;
+    z-index: 1;
 }
 /*entete du site*/
 header {
@@ -68,13 +68,11 @@ header .nav {
 .toggle-menu {
     display: flex;
     position: relative;
-    width: 20px;
-    height: 3px;
-    background-color: var(--white);
-    justify-content: end;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    max-width: 100PX;
-    max-height: 60px;
 }
 .toggle-menu::after,
 .toggle-menu::before{
@@ -86,10 +84,11 @@ header .nav {
     cursor: pointer;
 }
 .toggle-menu::after {
-    top: 10px;
+    top: 0px;
+    box-shadow: 0 10px 0 var(--white);
 }
 .toggle-menu::before {
-    top: -10px;
+    top: 20px;
 }
 .toggle-menu {
     display: none;
@@ -589,12 +588,13 @@ footer .foot-bottom {
         display: flex;
     }
     .toggle-menu.active::before{
-        transform: translateY(0) rotate(135deg);
-        box-shadow: 0 0 0 var(--asparagus);
+        transform: translateY(0) rotate(-135deg);
+        top: 10px;
     }
     .toggle-menu.active::after {
-        transform: translateY(0) rotate(-135deg);
-        box-shadow: 0 0 0 var(--asparagus);
+        transform: translateY(0) rotate(135deg);
+        box-shadow: 0 0 0 var(--white);
+        top: 10px;
     }
     header .nav.responsive {
         display: flex;
@@ -609,10 +609,14 @@ footer .foot-bottom {
         padding: 0 20px;
         margin: 30px 0;
     }
+    header .nav.responsive li {
+        width: 80%;
+    }
     header .nav.responsive li a {
         border-top: 1px solid var(--asparagus);
-        padding: 40px 0;
+        padding: 33px 0;
         font-size: 15px;
+        text-align: center;
     }
     header .nav.responsive li a:hover {
         padding-left: 40px;
