@@ -20,7 +20,7 @@
                     <li><a href="#contacter">Contact</a></li>
                 </ul>
             </nav>
-            
+
             <div class="toggle-menu"></div>
         </header>
 
@@ -132,16 +132,16 @@
                     <div class="top">
                         <div>
                             <label for="name">Nom*</label>
-                            <input type="text" name="Nom Complet" id="name" placeholder="Entrez votre nom complet" required>
+                            <input type="text" name="nomComplet" id="name" placeholder="Entrez votre nom complet" title="mettre un espace entre le nom et le prénom" pattern="(^[a-zA-Z]{1,30} [a-zA-Z]{1,30}$)" required>
                         </div>
                         <div>
                             <label for="mail">Email*</label>
-                            <input type="email" name="Email" id="mail" placeholder="Entrez votre adresse email" required>
+                            <input type="email" name="mail" id="mail" placeholder="Entrez votre adresse email" title="nom@domaine.tld" required>
                         </div>
                     </div>
                     <div>
                         <label for="message">Message*</label>
-                        <textarea name="Message" id="message" placeholder="Que voulez vous nous dire?"></textarea>
+                        <textarea name="Message" id="message" placeholder="Que voulez vous nous dire?" required></textarea>
                     </div>
                     <button type="submit">Envoyer</button>
                 </form>

@@ -5,6 +5,6 @@ toggle.onclick = function() {
     nav.classList.toggle('responsive');
 }
 
-let name = document.getElementById('name');
+
 
         
