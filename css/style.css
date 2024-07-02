@@ -65,6 +65,11 @@ header .nav {
     padding: 30px;
     cursor: pointer;
 }
+.nav li a:hover {
+    color: var(--green);
+    border-bottom: 4px solid var(--green);
+    padding: 20px 20px 40px 25px;
+}
 .toggle-menu {
     display: flex;
     position: relative;
@@ -148,6 +153,10 @@ header .nav {
     border: none;
     color: var(--white);
     cursor: pointer;
+}
+.hero button:hover {
+    background-color: var(--green);
+    color: var(--zodiac);
 }
 /*services*/
 .services {
@@ -409,6 +418,10 @@ h2 span {
     font-family: Montserrat;
     cursor: pointer;
 }
+#formul button:hover {
+    background-color: var(--asparagus);
+    color: var(--zodiac);
+}
 #formul .top {
     display: flex;
     flex-direction: row;
@@ -527,6 +540,10 @@ footer .foot-top {
     border-bottom-right-radius: 5px;
     cursor: pointer;
 } 
+.foot3 div button:hover {
+    background-color: var(--asparagus);
+    color: var(--zodiac);
+}
 footer .foot-bottom {
     display: flex;
     flex-direction: column;
@@ -603,7 +620,7 @@ footer .foot-bottom {
         align-items: center;
         justify-content: center;
         background-color: var(--zodiac);
-        height: 60vh;
+        height: 62vh;
         right: 0;
         width: 40%;
         padding: 0 20px;
@@ -938,12 +955,13 @@ footer .foot-bottom {
         display: flex;
     }
     .toggle-menu.active::before{
-        transform: translateY(0) rotate(135deg);
-        box-shadow: 0 0 0 var(--asparagus);
+        transform: translateY(0) rotate(-135deg);
+        top: 10px;
     }
     .toggle-menu.active::after {
-        transform: translateY(0) rotate(-135deg);
-        box-shadow: 0 0 0 var(--asparagus);
+        transform: translateY(0) rotate(135deg);
+        box-shadow: 0 0 0 var(--white);
+        top: 10px;
     }
     header .nav.responsive {
         display: flex;
@@ -952,16 +970,20 @@ footer .foot-bottom {
         align-items: center;
         justify-content: center;
         background-color: var(--zodiac);
-        height: 60vh;
+        height: 62vh;
         right: 0;
         width: 40%;
         padding: 0 20px;
         margin: 30px 0;
     }
+    header .nav.responsive li {
+        width: 80%;
+    }
     header .nav.responsive li a {
         border-top: 1px solid var(--asparagus);
-        padding: 40px 0;
+        padding: 33px 0;
         font-size: 15px;
+        text-align: center;
     }
     header .nav.responsive li a:hover {
         padding-left: 40px;
